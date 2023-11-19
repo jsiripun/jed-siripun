@@ -10,7 +10,7 @@ function HomePage() {
    return (
       <>
          <div>Jed Siripun</div>
-         <Link href="/posts/about">First Post</Link>
+         <Link href="/about">First Post</Link>
       </>	    
    )
 }

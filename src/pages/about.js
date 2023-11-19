@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Container from '../../components/container';
+import Container from '../components/container';
 
 
 export default function About() {
