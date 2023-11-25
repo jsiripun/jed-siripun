@@ -1,7 +1,8 @@
+"use client";
 import Link from 'next/link';
 import Head from 'next/head';
-import Container from '../components/container';
-import useFetch from './helpers/useFetch';
+import Container from '../../components/container';
+import useFetch from '../../helpers/useFetch';
 
 export default function About() {
    const { data, error } = useFetch('api/hello', {body: {'color': "red"}})
