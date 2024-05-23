@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import { Metadata } from 'next'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import HelloSection from '@/app/HelloSection'
  
 export const metadata: Metadata = {
