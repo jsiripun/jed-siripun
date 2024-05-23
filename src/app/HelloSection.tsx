@@ -4,7 +4,7 @@ import { SxProps } from '@mui/system';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import Image from "next/legacy/image"
+import Image from "next/image"
 
 const item: SxProps<Theme> = {
   display: 'flex',
@@ -20,7 +20,15 @@ function HelloSection() {
       sx={{ display: 'flex', overflow: 'hidden', bgcolor: 'blue' }}
     >
       <Container sx={{ mt: 15, mb: 30, display: 'flex', position: 'relative' }}>
-        <Image src="/hello_surprise.jpg" alt="bg" layout="fill" objectFit='cover' objectPosition='center' />
+        <Image
+          src="/hello_surprise.jpg"
+          alt="bg"
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center"
+          }} />
 
         {/* <Image src="/hello_surprise.jpg" alt="bg" width="64" height="64" /> */}
         <Grid container spacing={5}>
