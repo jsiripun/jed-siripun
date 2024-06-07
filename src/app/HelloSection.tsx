@@ -52,6 +52,20 @@ function HelloSection() {
                 </Box>
               </FadeInComponent>
             </WaitToRenderComponent>
+            <WaitToRenderComponent seconds={2}>
+              <FadeInComponent seconds={1}>
+                <Box sx={item}>
+                  I enjoy building things that make the world better.
+                </Box>
+              </FadeInComponent>
+            </WaitToRenderComponent>
+            <WaitToRenderComponent seconds={3}>
+              <FadeInComponent seconds={1}>
+                <Box sx={item}>
+                  👍
+                </Box>
+              </FadeInComponent>
+            </WaitToRenderComponent>
           </Grid>
         </Grid>
       </Container>
