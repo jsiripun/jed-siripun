@@ -1,23 +1,15 @@
 import { useState } from 'react';
-import Box from '@mui/material/Box';
 
 
 export const WaitToRenderComponent = (props: any) => {
     const [isWaiting, setIsWaiting] = useState(true);
 
-    setTimeout(() => {
-        setIsWaiting(false)
-    }, props.seconds);
+    setTimeout(() => setIsWaiting(false), props.seconds * 1000);
 
-
-    if (isWaiting) {
-        return null
-    } else {
-        return (
-            <Box>
-                {props.children}
-            </Box>
-        );
-    }
+    return (
+        <div>
+            {!isWaiting ? props.children : null}
+        </div>
+    );
 
 }

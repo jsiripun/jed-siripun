@@ -46,7 +46,7 @@ function HelloSection() {
               </Box>
             </FadeInComponent>
             <WaitToRenderComponent seconds={1}>
-              <FadeInComponent seconds={2}>
+              <FadeInComponent seconds={1}>
                 <Box sx={item}>
                   I'm a software engineer.
                 </Box>
