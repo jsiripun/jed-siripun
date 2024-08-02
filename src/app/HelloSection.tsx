@@ -13,6 +13,7 @@ const item: SxProps<Theme> = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  fontFamily: "Courier New"
 };
 
 
@@ -20,9 +21,9 @@ function HelloSection() {
   return (
     <Box
       component="section"
-      sx={{ display: 'flex', overflow: 'hidden', bgcolor: 'white' }}
+      sx={{ display: 'flex' }}
     >
-      <Container sx={{ mt: 15, mb: 30, display: 'flex', position: 'absolute', overflow: 'hidden' }}>
+      <Container sx={{ pt: 15, position: 'absolute', overflow: 'hidden', minWidth: "100vw", minHeight: "90%", backgroundColor: '#4a6148' }}>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
             <Box sx={item}>
@@ -45,22 +46,22 @@ function HelloSection() {
                 Hi, my name is Jed.
               </Box>
             </FadeInComponent>
-            <WaitToRenderComponent seconds={1}>
-              <FadeInComponent seconds={1}>
+            <WaitToRenderComponent seconds={2}>
+              <FadeInComponent seconds={2}>
                 <Box sx={item}>
                   I'm a software engineer.
                 </Box>
               </FadeInComponent>
             </WaitToRenderComponent>
-            <WaitToRenderComponent seconds={2}>
-              <FadeInComponent seconds={1}>
+            <WaitToRenderComponent seconds={4}>
+              <FadeInComponent seconds={2}>
                 <Box sx={item}>
                   I enjoy building things that make the world better.
                 </Box>
               </FadeInComponent>
             </WaitToRenderComponent>
-            <WaitToRenderComponent seconds={3}>
-              <FadeInComponent seconds={1}>
+            <WaitToRenderComponent seconds={6}>
+              <FadeInComponent seconds={2}>
                 <Box sx={item}>
                   👍
                 </Box>

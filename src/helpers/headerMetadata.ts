@@ -13,6 +13,6 @@ export const headerMetadata = [
     },
     {
         title: "Fun Facts",
-        route: "funfacts"
-    },   
+        route: "fun-facts"
+    },
 ]

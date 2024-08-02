@@ -11,10 +11,24 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Theme } from '@mui/material/styles';
+import { SxProps } from '@mui/system';
 import { useRouter } from 'next/navigation';
 import { headerMetadata } from '@/helpers/headerMetadata';
 
 const pages = headerMetadata.map(metadata => metadata.title);
+
+const button: SxProps<Theme> = {
+  my: 2,
+  mx: 2,
+  color: 'white',
+  display: 'block',
+  '&:hover': {
+    backgroundColor: '#fff',
+    color: '#70704d',
+  },
+};
+
 
 function Header() {
   const router = useRouter();
@@ -32,7 +46,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: '#70704d' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -112,7 +126,7 @@ function Header() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={button}
               >
                 {page}
               </Button>
