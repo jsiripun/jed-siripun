@@ -20,8 +20,8 @@ export default function About() {
 
    return (
       <Container style={{ 'font-family': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
-         <Head><title>Fun Facts</title></Head>
-         <p>I love to pick up hobbies, dive deep into them, learn all about them, and then immediately drop it for the next one. Here are some hobbies I've done such with:</p>
+         <Head><title>Coding Projects</title></Head>
+         <p>Here are some projects I've done:</p>
          <List sx={{ listStyleType: 'disc' }}>
             <ListItem sx={item}>Watercolors</ListItem>
             <ListItem sx={item}>Snowboarding</ListItem>

@@ -9,7 +9,7 @@ export const headerMetadata = [
     },
     {
         title: "Projects",
-        route: "projects"
+        route: "code-projects"
     },
     {
         title: "Fun Facts",
