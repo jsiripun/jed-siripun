@@ -15,8 +15,8 @@ const item: SxProps<Theme> = {
 export default function About() {
    const { data, error } = useFetch('api/hello', { body: { 'color': "red" } })
 
-   if (error) return <div>Failed to load</div>
-   if (!data) return <div>Loading...</div>
+   if (error) return (<Container><div>Failed to load</div></Container>)
+   if (!data) return (<Container><div>Loading...</div></Container>)
 
    return (
       <Container>
