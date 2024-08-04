@@ -4,7 +4,7 @@ import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
+import Container from '../components/container';
 import Image from "next/image"
 import { FadeInComponent } from '../components/fadeInComponent'
 import { WaitToRenderComponent } from '@/components/waitToRenderComponent';
@@ -23,7 +23,8 @@ function HelloSection() {
       component="section"
       sx={{ display: 'flex' }}
     >
-      <Container sx={{ pt: 15, position: 'absolute', overflow: 'hidden', minWidth: "100vw", minHeight: "90%", backgroundColor: '#4a6148' }}>
+      {/* <Container sx={{ pt: 10 }}> */}
+      <Container style={{ paddingTop: '10vw' }}>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
             <Box sx={item}>
