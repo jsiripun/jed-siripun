@@ -19,12 +19,12 @@ export default function About() {
    if (!data) return (<Container><div>Loading...</div></Container>)
 
    return (
-      <Container style={{ 'font-family': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
+      <Container style={{ 'fontFamily': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
          <Head><title>Coding Projects</title></Head>
          <p>Here are some projects I've done:</p>
          <List sx={{ listStyleType: 'disc' }}>
-            <ListItem sx={item}>Watercolors</ListItem>
-            <ListItem sx={item}>Snowboarding</ListItem>
+            <ListItem sx={item}>This website</ListItem>
+            <ListItem sx={item}>Pokemon Helper</ListItem>
             <ListItem sx={item}>Home Improvement</ListItem>
             <ListItem sx={item}>Tattooing</ListItem>
          </List>

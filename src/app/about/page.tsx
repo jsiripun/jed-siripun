@@ -27,7 +27,7 @@ export default function About() {
    if (!data) return (<Container><div>Loading...</div></Container>)
 
    return (
-      <Container style={{ 'font-family': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
+      <Container style={{ 'fontFamily': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
          <Head><title>About Me</title></Head>
          <p>
             Hello! My name is Jed and I find fulfillment in solving problems that have a positive impact on the world and its inhabitants.
