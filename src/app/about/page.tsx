@@ -12,14 +12,6 @@ const item: SxProps<Theme> = {
    padding: 0
 };
 
-const full: SxProps<Theme> = {
-   display: 'flex',
-   flexDirection: 'column',
-   alignItems: 'center',
-   fontFamily: "Courier New",
-   paddingRight: '10vw'
-};
-
 export default function About() {
    const { data, error } = useFetch('api/hello', { body: { 'color': "red" } })
 
@@ -27,7 +19,7 @@ export default function About() {
    if (!data) return (<Container><div>Loading...</div></Container>)
 
    return (
-      <Container style={{ 'fontFamily': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
+      <Container style={{ 'padding': '5vw 10vw 5vw 10vw' }}>
          <Head><title>About Me</title></Head>
          <p>
             Hello! My name is Jed and I find fulfillment in solving problems that have a positive impact on the world and its inhabitants.

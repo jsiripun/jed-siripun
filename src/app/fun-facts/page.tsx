@@ -19,7 +19,7 @@ export default function About() {
    if (!data) return (<Container><div>Loading...</div></Container>)
 
    return (
-      <Container style={{ 'fontFamily': 'Courier New', 'padding': '5vw 10vw 5vw 10vw' }}>
+      <Container style={{ 'padding': '5vw 10vw 5vw 10vw' }}>
          <Head><title>Fun Facts</title></Head>
          <p>I love to pick up hobbies, dive deep into them, learn all about them, and then immediately drop it for the next one. Here are some hobbies I've done such with:</p>
          <List sx={{ listStyleType: 'disc' }}>

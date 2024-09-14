@@ -13,7 +13,6 @@ const item: SxProps<Theme> = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  fontFamily: "Courier New",
   paddingRight: '10vw'
 };
 
