@@ -33,7 +33,7 @@ export default function About() {
             Hello! My name is Jed and I find fulfillment in solving problems that have a positive impact on the world and its inhabitants.
          </p>
          <br />
-         <p>I'm currently a software engineer at the Democratic Data Exchange.</p>
+         <p>I'm currently a software engineer at the <Link underline="hover" color="tan" target="_blank" rel="noreferrer" href="https://demexchange.com/">Democratic Data Exchange</Link>.</p>
          <br />
          <p>
             I have experience working with large volumes of data, web development, and cloud infrastructure.
