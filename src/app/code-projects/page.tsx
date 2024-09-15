@@ -65,7 +65,7 @@ export default function CodeProjects() {
                         title={projectData[key as keyof projectKeys].title}
                         loading="lazy"
                         onClick={handleOpen}
-                        style={{ objectFit: "fill", maxHeight: "100%", maxWidth: "100%" }}
+                        style={{ objectFit: "fill", maxHeight: "100%", maxWidth: "100%", cursor: "pointer" }}
                      />
                   </ImageListItem>
                )
