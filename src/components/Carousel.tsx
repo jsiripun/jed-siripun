@@ -14,7 +14,7 @@ export const CarouselImages = (props: any) => {
             {data.photos ? (
                 <Carousel>
                     {
-                        data.photos.map((img: string) => <img key={img} src={`${props.project}/${img}`} />)
+                        data.photos.map((img: string) => <img style={{ width: "100%", maxHeight: "25vw" }} key={img} src={`${props.project}/${img}`} />)
                     }
                 </Carousel>) : null
             }
