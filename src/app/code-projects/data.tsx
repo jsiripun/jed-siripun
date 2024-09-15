@@ -7,7 +7,7 @@ interface projectInfo {
 
 export interface projectKeys {
     superluxland: projectInfo,
-    tipsuwan: projectInfo,
+    tipsuwanice: projectInfo,
     burgerbro: projectInfo,
     floridadatingsim: projectInfo
 }
@@ -25,8 +25,8 @@ export const projectData: projectKeys = {
         description: `Superluxland.com was a website advertising super luxury condominiums in Bangkok, Thailand.
        I had updated the website and added a VR/360 degree component. When viewing on a mobile device, users were able to enter VR mode and view the room if they owned a VR headset. The last picture depicts a boat, but would be replaced with photos of the condominium being sold.`
     },
-    "tipsuwan": {
-        id: "tipsuwan",
+    "tipsuwanice": {
+        id: "tipsuwanice",
         img: "/tipsuwanice/tipsuwanice.png",
         title: "Tipsuwan Ice Factory",
         description: `Tipsuwan Ice Factory is an Ice Factory located in Bangkok, Thailand that was looking into a new POS system. Below are screenshots of a quick mock up that I created for them.

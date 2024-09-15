@@ -1,8 +1,8 @@
 "use client";
 import Head from 'next/head';
+import { CarouselImages } from '../../components/Carousel'
 import { useState } from 'react';
 import Container from '../../components/container';
-import useFetch from '../../helpers/useFetch';
 import { SxProps } from '@mui/system';
 import { Theme } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
@@ -37,12 +37,8 @@ const closeButton: SxProps<Theme> = {
 
 
 export default function CodeProjects() {
-   const { data, error } = useFetch('api/hello', { body: { 'color': "red" } })
    const [modalOpen, setModalOpen] = useState(false);
    const [activeModalData, setActiveModalData] = useState<any>(null);
-
-   if (error) return (<Container><div>Failed to load</div></Container>)
-   if (!data) return (<Container><div>Loading...</div></Container>)
 
    const handleOpen = (value: any) => {
       setModalOpen(true);
@@ -82,13 +78,18 @@ export default function CodeProjects() {
             aria-describedby="modal-modal-description"
          >
             <Box sx={modal}>
-               <Typography id="modal-modal-title" variant="h6" component="h2">
-                  {activeModalData ? activeModalData.title : ""}
-               </Typography>
-               <Button onClick={handleClose} sx={closeButton}><CloseIcon /></Button>
-               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  {activeModalData ? activeModalData.description : ""}
-               </Typography>
+               {activeModalData ? (
+                  <div>
+                     <CarouselImages project={activeModalData.id} />
+                     <Typography id="modal-modal-title" variant="h6" component="h2">
+                        {activeModalData.title}
+                     </Typography>
+                     <Button onClick={handleClose} sx={closeButton}><CloseIcon /></Button>
+                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                        {activeModalData.description}
+                     </Typography>
+                  </div>
+               ) : null}
             </Box>
          </Modal>
 
