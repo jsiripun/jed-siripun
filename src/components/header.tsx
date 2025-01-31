@@ -11,23 +11,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Theme } from '@mui/material/styles';
-import { SxProps } from '@mui/system';
 import { useRouter } from 'next/navigation';
 import { headerMetadata } from '@/helpers/headerMetadata';
 
 const pages = headerMetadata.map(metadata => metadata.title);
-
-const button: SxProps<Theme> = {
-  my: 2,
-  mx: 2,
-  color: 'white',
-  display: 'block',
-  '&:hover': {
-    backgroundColor: '#fff',
-    color: '#70704d',
-  },
-};
 
 
 function Header() {
@@ -46,8 +33,8 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#70704d' }}>
-      <Container maxWidth="xl">
+    <AppBar position="static">
+      <Container maxWidth={false} className='bg-emerald-800'>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -67,66 +54,12 @@ function Header() {
             Jed Siripun
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Jed Siripun
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "right" }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={button}
+                className='mx-2 my-2 text-white display:block hover:bg-white hover:text-emerald-900'
               >
                 {page}
               </Button>

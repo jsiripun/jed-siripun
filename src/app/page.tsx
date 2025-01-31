@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import Image from "next/image"
-import HelloSection from '@/app/HelloSection'
+import Home from '@/app/Home'
 import Container from '@/components/container';
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function HomePage() {
    return (
       <Container>
-         <HelloSection />
+         <Home />
       </Container>
    )
 }
