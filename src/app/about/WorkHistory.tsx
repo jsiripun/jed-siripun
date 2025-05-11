@@ -12,7 +12,7 @@ const WorkHistory = () => {
           role: "Senior Developer",
           period: "2019 - Present",
           startDate: "2019-12",
-          endDate: "2025-01", // Current
+          endDate: "2025-03", // Current
           description: "Led development of core product features and mentored junior developers.",
           achievements: [
             "Lead new feature development using Python, Terraform, React, NodeJS, Snowflake, and Postgres, leveraging agile methodology and clear documentation for high impact deliverables to the greater progressive ecosystem",

@@ -4,7 +4,9 @@ import Container from '../../components/container';
 import useFetch from '../../helpers/useFetch';
 import { SxProps } from '@mui/system';
 import { Theme } from '@mui/material/styles';
-import { Tooltip, Link, List, ListItem } from '@mui/material';
+import React, { useState } from 'react';
+import WorkHistory from './WorkHistory';
+import { Work } from '@mui/icons-material';
 
 const item: SxProps<Theme> = {
    display: 'list-item',
@@ -18,34 +20,18 @@ export default function About() {
    if (error) return (<Container><div>Failed to load</div></Container>)
    if (!data) return (<Container><div>Loading...</div></Container>)
 
+      
    return (
-      <Container style={{ 'padding': '5vw 10vw 5vw 10vw' }}>
+      <Container>
          <Head><title>About Me</title></Head>
-         <p>
-            Hello! My name is Jed and I find fulfillment in solving problems that have a positive impact on the world and its inhabitants.
-         </p>
-         <br />
-         <p>I'm currently a software engineer at the <Link underline="hover" color="tan" target="_blank" rel="noreferrer" href="https://demexchange.com/">Democratic Data Exchange</Link>.</p>
-         <br />
-         <p>
-            I have experience working with large volumes of data, web development, and cloud infrastructure.
-            The most recent tech stack I've been working in includes:
-            <List sx={{ listStyleType: 'disc' }}>
-               <ListItem sx={item}>Python</ListItem>
-               <ListItem sx={item}>Javascript (React + Node)</ListItem>
-               <ListItem sx={item}>Terraform</ListItem>
-               <ListItem sx={item}>Snowflake</ListItem>
-               <ListItem sx={item}>BigQuery</ListItem>
-               <ListItem sx={item}>Postgres</ListItem>
-            </List>
+         <div className='bg-emerald-700/80'>
+         <p  style={{ 'padding': '5vw 10vw 5vw 10vw' }}>
+            Per the website name, my name is also Jed Siripun. 
             <br />
-            No matter the technology, I'm great at picking things up and running with them.
-            Check out some of my <Link href="/fun-facts" underline="hover" color="tan">hobbies</Link> to see random things I've learned.
+            I'm originally from Chicago but am currently based out of Seattle, WA.
          </p>
-         <br />
-         I <Tooltip title="(not so recently, 2015)"><span>graduated</span></Tooltip> from the University of Illinois at Chicago with a Computer Science degree and a minor in Art. I'm currently based out of Seattle, WA.
-
-         {/* <h2>{data.text}</h2> */}
+         </div>
+         
       </Container>
    )
 }
