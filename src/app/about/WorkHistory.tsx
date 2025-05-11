@@ -15,11 +15,15 @@ const WorkHistory = () => {
           endDate: "2025-01", // Current
           description: "Led development of core product features and mentored junior developers.",
           achievements: [
-            "Increased team productivity by 40% through implementation of new CI/CD pipeline",
-            "Architected and launched company's flagship mobile app with 100k+ downloads",
-            "Managed team of 5 developers across 3 time zones"
+            "Lead new feature development using Python, Terraform, React, NodeJS, Snowflake, and Postgres, leveraging agile methodology and clear documentation for high impact deliverables to the greater progressive ecosystem",
+            "Design and implement new architecture patterns to provide clients access to over 5.7B data points",
+            "Reduce cost of AWS and Snowflake spending by 50% through re-architecture of the ETL pipelines",
+            "Mentor and assist other engineers to support and robustify the current architecture and build new features",
+            "Oversee team of 3 consultants and collaborate with Product and Client Success teams for optimal results",
+            "Standardize data practices, setting new guidelines for all data structures within DDx",
+            "Develop dashboards with Tableau, empowering clients to make strategic, data-driven decisions"
           ],
-          technologies: ["React", "Node.js", "AWS", "Docker"],
+          technologies: ["Python", "React", "Node.js", "AWS", "Terraform", "Docker", "PostgreSQL", "Snowflake", "dbt"],
           color: "bg-blue-500",
           hoverColor: "bg-blue-200"
         },
@@ -33,11 +37,15 @@ const WorkHistory = () => {
           endDate: "2019-12",
           description: "Developed and maintained multiple client applications.",
           achievements: [
-            "Reduced load times by 60% through optimization of database queries",
-            "Implemented responsive design principles across 12 client websites",
-            "Created automated testing suite reducing QA time by 30%"
+            "Improved state-level democratic party data quality (TX, PA, FL, ME) and BigQuery onboarding process for DNC",
+            "Automated the data validation process of geocodes and phone numbers through Python script development",
+            "Aggregated data collected in the 2018 election cycle and determined areas of improvement in the ecosystem",
+            "Researched improvement opportunities in voter data files and perform data audits for clients",
+            "Developed Python scripts utilizing Blue State Digital’s API to automate email responses based on form responses",
+            "Worked with Vertica Database to build pipelines for data between VAN, Hustle, and Civis",
+            "Advocated for secure technology use throughout campaign staff (best practices, 2FA, security keys)"
           ],
-          technologies: ["Angular", "Python", "PostgreSQL", "Redis"],
+          technologies: ["Python", "PostgreSQL", "BigQuery", "Vertica"],
           color: "bg-green-500",
           hoverColor: "bg-green-200"
         },
@@ -51,11 +59,10 @@ const WorkHistory = () => {
           endDate: "2018-08",
           description: "Contributed to various startup projects and gained full-stack experience.",
           achievements: [
-            "Developed MVP for 3 startup clients",
-            "Implemented payment processing system handling $1M+ in transactions",
-            "Created developer documentation and style guides"
+            "Implemented software solutions for small business owners in the food services and real estate industry located in Bangkok, Thailand by modernizing their daily operations",
+            "Employed agile structure of constant communication with the clients to ensure their satisfaction with the project"
           ],
-          technologies: ["JavaScript", "PHP", "MySQL", "jQuery"],
+          technologies: ["JavaScript", "CSS", "HTML", "Tomcat", "Java", "MySQL"],
           color: "bg-rose-500",
           hoverColor: "bg-rose-200"
         },
@@ -69,11 +76,13 @@ const WorkHistory = () => {
           endDate: "2017-12",
           description: "Contributed to various startup projects and gained full-stack experience.",
           achievements: [
-            "Developed MVP for 3 startup clients",
-            "Implemented payment processing system handling $1M+ in transactions",
-            "Created developer documentation and style guides"
+            "Identified and corrected software defects to support internal business applications for F500 Insurance Company",
+            "Managed and coordinated a 5-person team across international offices to streamline task organization",
+            "Developed scripts to automate weekly file transfers to outside vendors",
+            "Ensured timely project delivery in collaboration with business operations managers",
+            "Recipient of TCS’s Quarterly Partnership Appreciation Award for exceptional customer service delivery"
           ],
-          technologies: ["JavaScript", "PHP", "MySQL", "jQuery"],
+          technologies: ["Java", "Oracle", "Bash", "Jenkins"],
           color: "bg-orange-500",
           hoverColor: "bg-orange-200"
         }
@@ -143,7 +152,7 @@ const WorkHistory = () => {
             {/* Duration line */}
             <div 
               className={`absolute h-1 w-full transition-colors duration-300 
-                ${hoveredJob?.id === job.id ? job.color.replace('bg-', 'bg-') : 'bg-gray-200'}`}
+                ${hoveredJob?.id === job.id || selectedJob.id === job.id? job.color.replace('bg-', 'bg-') : 'bg-gray-200'}`}
               style={{ top: '63px' }}
             />
 

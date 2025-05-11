@@ -1,15 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-// import Container from '../components/container';
-import Image from "next/image"
-import { GitHub, LinkedIn } from '@mui/icons-material';
-import { Mail, ExternalLink, Heart, Coffee, Lightbulb, Menu } from 'lucide-react';
-import { FadeInComponent } from '../components/fadeInComponent'
-import { WaitToRenderComponent } from '@/components/waitToRenderComponent';
 
 const item: SxProps<Theme> = {
   display: 'flex',
@@ -22,7 +14,7 @@ const item: SxProps<Theme> = {
 function SkillsSection() {
     const skills = [
         "JavaScript", "TypeScript", "React", "Node.js", "Python",
-        "SQL", "Snowflake", "Postgres", "Terraform", "AWS", "Git"
+        "SQL", "Snowflake", "Postgres", "Terraform", "AWS", "Git", "dbt"
       ];
 
   return (
