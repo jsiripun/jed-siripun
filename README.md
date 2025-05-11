@@ -1,7 +1,8 @@
 Local Setup:
-1. `npm install` 
-2. `npm run dev`
-3. Open [http://localhost:3000](http://localhost:3000)
+1. `brew install pnpm` # only if you haven't installed pnpm before - technically you could just use npm too
+2. `pnpm install` 
+3. `pnpm dev`
+4. Open [http://localhost:3000](http://localhost:3000)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
