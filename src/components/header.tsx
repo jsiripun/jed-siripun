@@ -40,7 +40,7 @@ function Header() {
         <nav className="bg-stone-900 text-stone-100 p-4">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
             <h1 className="font-serif text-2xl">Jed Siripun</h1>
-            <div className="md:hidden">
+            {/* <div className="md:hidden">
               <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
                 <Menu />
               </button>
@@ -55,12 +55,12 @@ function Header() {
                   {page}
                 </Button>
               ))}
-            </div>
+            </div> */}
           </div>
         </nav>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
+        {/* {isMenuOpen && (
           <div className="md:hidden bg-stone-800 text-stone-100 p-4 mb-4">
             <div className="flex flex-col space-y-4">
               {pages.map((page) => (
@@ -74,7 +74,7 @@ function Header() {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </Container>
     </AppBar>
   );
